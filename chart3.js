@@ -64,8 +64,6 @@ const getAcAnnual = (annual_production) =>{
    const chart1 = (address,systemCapacity)=>{ 
    
     fetch('https://developer.nrel.gov/api/pvwatts/v8.json?api_key=3tqiqGVtlbyrfadqyJK0TuxtDrWKF7eA48yUppK4&azimuth=180&system_capacity='+systemCapacity+'&losses=14&array_type=1&module_type=0&gcr=0.4&dc_ac_ratio=1.2&inv_eff=96.0&radius=0&dataset=nsrdb&tilt=10&address='+address+'&soiling=12|4|45|23|9|99|67|12.54|54|9|0|7.6&albedo=0.3&bifaciality=0.7'
-     // fetch('https://developer.nrel.gov/api/pvwatts/v6.json?api_key=58qxO9wehcnYMDjEoVMiSBhX5LP48ZyUKXNYp4YM&system_capacity='+systemCapacity+'&losses=14&array_type=1&module_type=0&gcr=0.4&dc_ac_ratio=1.2&inv_eff=96.0&radius=0&dataset=nsrdb&tilt=10&address='+address+'&soiling=12|4|45|23|9|99|67|12.54|54|9|0|7.6&albedo=0.3&bifaciality=0.7'
-      //fetch('https://developer.nrel.gov/api/pvwatts/v6.json?api_key=58qxO9wehcnYMDjEoVMiSBhX5LP48ZyUKXNYp4YM&system_capacity='+systemSize+'&azimuth=180&tilt=40&array_type=1&module_type=1&losses=10&address='+address   
            ).then((response)=> response.json())
         .then((data) =>  getAcAnnual(data))
     
